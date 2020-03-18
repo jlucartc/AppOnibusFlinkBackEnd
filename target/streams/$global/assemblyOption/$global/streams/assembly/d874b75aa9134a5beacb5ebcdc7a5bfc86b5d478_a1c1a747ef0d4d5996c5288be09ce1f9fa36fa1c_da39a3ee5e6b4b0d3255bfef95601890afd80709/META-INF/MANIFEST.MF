@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.0
+Built-By: root
+Build-Jdk: 11.0.2
+Specification-Title: Apache Calcite Avatica
+Specification-Version: 1.15
+Specification-Vendor: The Apache Software Foundation
+Implementation-Title: Apache Calcite Avatica
+Implementation-Version: 1.15.0
+Implementation-Vendor-Id: org.apache.calcite.avatica
+Implementation-Vendor: The Apache Software Foundation
+Implementation-URL: https://calcite.apache.org/avatica/shaded/avatica-co
+ re
+

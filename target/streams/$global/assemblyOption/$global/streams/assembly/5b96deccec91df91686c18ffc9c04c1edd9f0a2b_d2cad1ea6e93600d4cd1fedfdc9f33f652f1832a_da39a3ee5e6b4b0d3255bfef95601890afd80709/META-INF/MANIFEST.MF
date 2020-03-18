@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: postgresql-async
+Implementation-Version: 0.2.21
+Specification-Vendor: com.github.mauricio
+Specification-Title: postgresql-async
+Implementation-Vendor-Id: com.github.mauricio
+Specification-Version: 0.2.21
+Implementation-Vendor: com.github.mauricio
+

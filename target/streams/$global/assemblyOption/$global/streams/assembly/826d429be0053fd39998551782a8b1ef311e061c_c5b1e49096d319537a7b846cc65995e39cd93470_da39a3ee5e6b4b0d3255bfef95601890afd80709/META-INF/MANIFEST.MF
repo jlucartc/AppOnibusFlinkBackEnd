@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: db-async-common
+Implementation-Version: 0.2.21
+Specification-Vendor: com.github.mauricio
+Specification-Title: db-async-common
+Implementation-Vendor-Id: com.github.mauricio
+Specification-Version: 0.2.21
+Implementation-Vendor: com.github.mauricio
+
