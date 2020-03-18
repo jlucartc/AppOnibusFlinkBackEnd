@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="839b1f49-5d75-468a-b5a5-935975309142" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/scala/github/jlucartc/Env/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/github/jlucartc/Env/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/github/jlucartc/Env/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/github/jlucartc/Env/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/github/jlucartc/Env/server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +20,7 @@
     </projectState>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/main/scala/github/jlucartc/Env" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -35,6 +35,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/scala" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -81,7 +82,7 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$USER_HOME$/testflinktemplate" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../testflinktemplate" value="PREVIEW" />
       </map>
     </option>
   </component>
@@ -99,6 +100,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="205" y="31" key="SettingsEditor" timestamp="1584567547456">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1584567547456" />
     <state x="380" y="175" key="run.anything.popup" timestamp="1584541004694">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
