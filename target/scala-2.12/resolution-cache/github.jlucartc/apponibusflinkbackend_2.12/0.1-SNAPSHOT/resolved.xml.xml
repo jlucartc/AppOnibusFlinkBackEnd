@@ -4,7 +4,7 @@
 		module="apponibusflinkbackend_2.12"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20200318174807"
+		publication="20200324104648"
 	>
 		<description>
 		AppOnibusFlinkBackEnd
@@ -52,6 +52,6 @@
 		<dependency org="org.apache.flink" name="flink-table-api-scala-bridge_2.12" rev="1.10.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.flink" name="flink-table-planner-blink_2.12" rev="1.10.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.flink" name="flink-table-runtime-blink_2.12" rev="1.10.0" conf="compile->default(compile)"/>
-		<dependency org="org.eclipse.paho" name="org.eclipse.paho.client.mqttv3" rev="1.2.2" conf="compile->default(compile)"/>
+		<dependency org="org.eclipse.paho" name="org.eclipse.paho.client.mqttv3" rev="1.2.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

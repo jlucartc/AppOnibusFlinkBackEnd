@@ -7,7 +7,7 @@
 		revision="0.1-SNAPSHOT"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20200318113444"/>
+		date="20200324104748"/>
 	<dependencies>
 		<module organisation="org.apache.flink" name="flink-table-common">
 			<revision name="1.10.0" status="release" pubdate="20200207174328" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="18">

@@ -515,6 +515,21 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default]
+[debug] sbt-chain: Checking cache for: dependency: org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 {compile=[default, compile, runtime, default(compile), master], runtime=[default, compile, runtime, default(compile), master], test=[default, compile, runtime, default(compile), master], compile-internal=[default, compile, runtime, default(compile), master], runtime-internal=[default, compile, runtime, default(compile), master], test-internal=[default, compile, runtime, default(compile), master]}
+[debug] sbt-chain: module revision found in cache: org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0
+[debug] 	found org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 in sbt-chain
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->default]
 [debug] sbt-chain: Checking cache for: dependency: org.apache.flink#flink-core;1.10.0 {compile=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], runtime=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], test=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], compile-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], runtime-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], test-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.apache.flink#flink-core;1.10.0
@@ -838,21 +853,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default]
-[debug] sbt-chain: Checking cache for: dependency: org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 {compile=[default, compile, runtime, default(compile), master], runtime=[default, compile, runtime, default(compile), master], test=[default, compile, runtime, default(compile), master], compile-internal=[default, compile, runtime, default(compile), master], runtime-internal=[default, compile, runtime, default(compile), master], test-internal=[default, compile, runtime, default(compile), master]}
-[debug] sbt-chain: module revision found in cache: org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2
-[debug] 	found org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 in sbt-chain
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-java8-compat_2.12;0.8.0
@@ -1249,6 +1249,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->compile]
@@ -1497,18 +1509,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
@@ -1914,6 +1914,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->compile]
@@ -2173,18 +2185,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
@@ -2587,6 +2587,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->compile]
@@ -2835,18 +2847,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
@@ -3249,6 +3249,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->compile]
@@ -3505,18 +3517,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
@@ -3957,6 +3957,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [test->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [test->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [test->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [test->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [test->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [test->compile]
@@ -4213,18 +4225,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [test->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [test->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [test->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->compile]
@@ -4622,6 +4622,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->compile]
@@ -4870,18 +4882,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
@@ -5274,6 +5274,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile-internal->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile-internal->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile-internal->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile-internal->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile-internal->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile-internal->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile-internal->compile]
@@ -5522,18 +5534,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile-internal->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile-internal->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile-internal->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile-internal->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile-internal->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile-internal->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile-internal->compile]
@@ -5928,6 +5928,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->compile]
@@ -6176,18 +6188,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
@@ -6590,6 +6590,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->compile]
@@ -6846,18 +6858,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
@@ -7261,6 +7261,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime-internal->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime-internal->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime-internal->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime-internal->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime-internal->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime-internal->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime-internal->compile]
@@ -7517,18 +7529,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime-internal->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime-internal->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime-internal->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime-internal->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime-internal->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime-internal->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime-internal->compile]
@@ -7924,6 +7924,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [compile->compile]
@@ -8172,18 +8184,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [compile->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
@@ -8586,6 +8586,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [runtime->compile]
@@ -8842,18 +8854,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [runtime->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
@@ -9288,6 +9288,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [test->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [test->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [test->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [test->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [test->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [test->compile]
@@ -9544,18 +9556,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [test->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [test->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [test->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->compile]
@@ -9992,6 +9992,18 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [test-internal->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [test-internal->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-annotations;1.10.0 [test-internal->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->default]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->default(compile)]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->runtime]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->compile]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->master]
+[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0 [test-internal->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [test-internal->default]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [test-internal->runtime]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.flink#flink-core;1.10.0 [test-internal->compile]
@@ -10248,18 +10260,6 @@
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [test-internal->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [test-internal->compile(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.apache.kafka#kafka-clients;2.3.0 [test-internal->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->default]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->default(compile)]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->runtime]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->compile]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->master]
-[debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2 [test-internal->master]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test-internal->compile]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test-internal->runtime(*)]
 [debug] == resolving dependencies mainrunner#mainrunner$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test-internal->compile]
@@ -10324,174 +10324,174 @@
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.apache.flink#flink-jdbc_2.12;1.10.0!flink-jdbc_2.12.jar(src)
+[debug] no default ivy user dir defined: set to /home/luca/.ivy2
 [debug] 	[NOT REQUIRED] commons-collections#commons-collections;3.2.2!commons-collections.jar(src)
 [debug] no default ivy user dir defined: set to /home/luca/.ivy2
-[debug] no default ivy user dir defined: set to /home/luca/.ivy2
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to /home/luca/.ivy2/cache
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] 	[NOT REQUIRED] commons-cli#commons-cli;1.3.1!commons-cli.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-connector-kafka_2.12;1.10.0!flink-connector-kafka_2.12.jar(src)
+[debug] no default ivy user dir defined: set to /home/luca/.ivy2
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to /home/luca/.ivy2/cache
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] 	[NOT REQUIRED] com.github.luben#zstd-jni;1.4.0-1!zstd-jni.jar(src)
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] no default ivy user dir defined: set to /home/luca/.ivy2
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-connector-kafka_2.12;1.10.0!flink-connector-kafka_2.12.jar(src)
+[debug] no default cache defined: set to /home/luca/.ivy2/cache
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] no default ivy user dir defined: set to /home/luca/.ivy2
-[debug] no default ivy user dir defined: set to /home/luca/.ivy2
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-protobuf_2.12;2.5.21!akka-protobuf_2.12.jar(src)
+[debug] no default cache defined: set to /home/luca/.ivy2/cache
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] no default ivy user dir defined: set to /home/luca/.ivy2
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] no default cache defined: set to /home/luca/.ivy2/cache
 [debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to /home/luca/.ivy2/cache
-[debug] no default cache defined: set to /home/luca/.ivy2/cache
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /home/luca/.ivy2/cache
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to /home/luca/.ivy2/cache
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to /home/luca/.ivy2/cache
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (70ms)
+[debug] settings loaded (46ms)
+[debug] settings loaded (60ms)
 [debug] 	default cache: /home/luca/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	default cache: /home/luca/.ivy2/cache
+[debug] 	-- 5 resolvers:
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
 [debug] 	shared [file]
-[debug] settings loaded (69ms)
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	default [chain] [local, main]
-[debug] settings loaded (65ms)
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] 	default cache: /home/luca/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.3.2!commons-lang3.jar(src)
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] 	shared [file]
 [debug] 	default [chain] [local, main]
-[debug] 	default cache: /home/luca/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
 [debug] 	default [chain] [local, main]
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
+[debug] no default cache defined: set to /home/luca/.ivy2/cache
 [debug] 	public [ibiblio]
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.1!scala-reflect.jar(src)
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.26!slf4j-api.jar(src)
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.3.2!commons-lang3.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.flink#flink-table-api-java;1.10.0!flink-table-api-java.jar(src)
-[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (82ms)
-[debug] 	default cache: /home/luca/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] settings loaded (75ms)
-[debug] 	default cache: /home/luca/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (82ms)
-[debug] 	default cache: /home/luca/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
 [debug] 	[NOT REQUIRED] org.codehaus.janino#commons-compiler;3.0.9!commons-compiler.jar(src)
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-slf4j_2.12;2.5.21!akka-slf4j_2.12.jar(src)
+[debug] 	[NOT REQUIRED] joda-time#joda-time;2.9.7!joda-time.jar(src)
 [debug] 	[NOT REQUIRED] org.javassist#javassist;3.24.0-GA!javassist.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.flink#flink-streaming-scala_2.12;1.10.0!flink-streaming-scala_2.12.jar(src)
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] 	[NOT REQUIRED] com.github.mauricio#db-async-common_2.12;0.2.21!db-async-common_2.12.jar(src)
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] 	[NOT REQUIRED] org.codehaus.janino#janino;3.0.9!janino.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.flink#flink-java;1.10.0!flink-java.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.1!scala-compiler.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.12;1.1.1!scala-parser-combinators_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.reflections#reflections;0.9.10!reflections.jar(src)
-[debug] 	[NOT REQUIRED] com.github.scopt#scopt_2.12;3.5.0!scopt_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-connector-kafka-base_2.12;1.10.0!flink-connector-kafka-base_2.12.jar(src)
-[debug] 	[NOT REQUIRED] joda-time#joda-time;2.9.7!joda-time.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-table-api-scala-bridge_2.12;1.10.0!flink-table-api-scala-bridge_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.2!reactive-streams.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-table-runtime-blink_2.12;1.10.0!flink-table-runtime-blink_2.12.jar(src)
-[debug] 	[NOT REQUIRED] io.netty#netty-all;4.1.6.Final!netty-all.jar(src)
-[debug] 	[NOT REQUIRED] log4j#log4j;1.2.17!log4j.jar(src)
-[debug] 	[NOT REQUIRED] com.twitter#chill_2.12;0.7.6!chill_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.joda#joda-convert;1.8.1!joda-convert.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-queryable-state-client-java;1.10.0!flink-queryable-state-client-java.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-runtime_2.12;1.10.0!flink-runtime_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-streaming-java_2.12;1.10.0!flink-streaming-java_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-table-common;1.10.0!flink-table-common.jar(src)
+[debug] settings loaded (37ms)
+[debug] 	default cache: /home/luca/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.1!scala-compiler.jar(src)
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] 	[NOT REQUIRED] org.reflections#reflections;0.9.10!reflections.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.12;1.1.1!scala-parser-combinators_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-connector-kafka-base_2.12;1.10.0!flink-connector-kafka-base_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.github.scopt#scopt_2.12;3.5.0!scopt_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.2!reactive-streams.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-table-api-scala-bridge_2.12;1.10.0!flink-table-api-scala-bridge_2.12.jar(src)
+[debug] 	[NOT REQUIRED] log4j#log4j;1.2.17!log4j.jar(src)
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-table-runtime-blink_2.12;1.10.0!flink-table-runtime-blink_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.twitter#chill_2.12;0.7.6!chill_2.12.jar(src)
+[debug] including url: jar:file:/home/luca/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (36ms)
+[debug] settings loaded (57ms)
+[debug] 	default cache: /home/luca/.ivy2/cache
+[debug] 	default cache: /home/luca/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.joda#joda-convert;1.8.1!joda-convert.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-streaming-java_2.12;1.10.0!flink-streaming-java_2.12.jar(src)
+[debug] settings loaded (46ms)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-runtime_2.12;1.10.0!flink-runtime_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.lz4#lz4-java;1.6.0!lz4-java.jar(src)
+[debug] 	default cache: /home/luca/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	[NOT REQUIRED] io.netty#netty-all;4.1.6.Final!netty-all.jar(src)
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
 [debug] 	[NOT REQUIRED] org.apache.flink#flink-hadoop-fs;1.10.0!flink-hadoop-fs.jar(src)
-[debug] 	[NOT REQUIRED] com.github.mauricio#postgresql-async_2.12;0.2.21!postgresql-async_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.postgresql#postgresql;42.2.9!postgresql.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-table-common;1.10.0!flink-table-common.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.flink#flink-optimizer_2.12;1.10.0!flink-optimizer_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.postgresql#postgresql;42.2.9!postgresql.jar(src)
+[debug] 	[NOT REQUIRED] com.github.mauricio#postgresql-async_2.12;0.2.21!postgresql-async_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.flink#flink-annotations;1.10.0!flink-annotations.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.flink#flink-core;1.10.0!flink-core.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-cep_2.12;1.10.0!flink-cep_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-slf4j_2.12;2.5.21!akka-slf4j_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe#ssl-config-core_2.12;0.3.7!ssl-config-core_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.commons#commons-compress;1.18!commons-compress.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-stream_2.12;2.5.21!akka-stream_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe#ssl-config-core_2.12;0.3.7!ssl-config-core_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.xerial.snappy#snappy-java;1.1.7.3!snappy-java.jar(src)
+[debug] 	[NOT REQUIRED] commons-io#commons-io;2.4!commons-io.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-cep_2.12;1.10.0!flink-cep_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-stream_2.12;2.5.21!akka-stream_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.commons#commons-math3;3.5!commons-math3.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe#config;1.3.3!config.jar(src)
-[debug] 	[NOT REQUIRED] com.twitter#chill-java;0.7.6!chill-java.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-clients_2.12;1.10.0!flink-clients_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-queryable-state-client-java;1.10.0!flink-queryable-state-client-java.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.flink#flink-table-planner-blink_2.12;1.10.0!flink-table-planner-blink_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.flink#flink-table-api-java-bridge_2.12;1.10.0!flink-table-api-java-bridge_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.lz4#lz4-java;1.6.0!lz4-java.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-table-api-scala_2.12;1.10.0!flink-table-api-scala_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-scala_2.12;1.10.0!flink-scala_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.objenesis#objenesis;2.1!objenesis.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.calcite.avatica#avatica-core;1.15.0!avatica-core.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-metrics-core;1.10.0!flink-metrics-core.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-clients_2.12;1.10.0!flink-clients_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.esotericsoftware.kryo#kryo;2.24.0!kryo.jar(src)
-[debug] 	[NOT REQUIRED] com.esotericsoftware.minlog#minlog;1.2!minlog.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.1!scala-library.jar(src)
-[debug] 	[NOT REQUIRED] commons-io#commons-io;2.4!commons-io.jar(src)
-[debug] 	[NOT REQUIRED] org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.2!org.eclipse.paho.client.mqttv3.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(src)
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.3!logback-classic.jar(src)
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.3!logback-core.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.flink#flink-runtime-web_2.12;1.10.0!flink-runtime-web_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#slf4j-simple;1.6.2!slf4j-simple.jar(src)
-[debug] 	[NOT REQUIRED] jline#jline;2.14.1!jline.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.kafka#kafka-clients;2.3.0!kafka-clients.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.12;2.5.21!akka-actor_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.clapper#grizzled-slf4j_2.12;1.3.2!grizzled-slf4j_2.12.jar(src)
-[debug] :: resolution report :: resolve 4098ms :: artifacts dl 165ms
+[debug] 	[NOT REQUIRED] com.twitter#chill-java;0.7.6!chill-java.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-scala_2.12;1.10.0!flink-scala_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-table-api-scala_2.12;1.10.0!flink-table-api-scala_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.objenesis#objenesis;2.1!objenesis.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe#config;1.3.3!config.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.calcite.avatica#avatica-core;1.15.0!avatica-core.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.12;2.5.21!akka-actor_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-metrics-core;1.10.0!flink-metrics-core.jar(src)
+[debug] 	[NOT REQUIRED] com.esotericsoftware.minlog#minlog;1.2!minlog.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.kafka#kafka-clients;2.3.0!kafka-clients.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.1!scala-library.jar(src)
+[debug] 	[NOT REQUIRED] com.esotericsoftware.kryo#kryo;2.24.0!kryo.jar(src)
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.3!logback-core.jar(src)
+[debug] 	[NOT REQUIRED] jline#jline;2.14.1!jline.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.flink#flink-runtime-web_2.12;1.10.0!flink-runtime-web_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.eclipse.paho#org.eclipse.paho.client.mqttv3;1.2.0!org.eclipse.paho.client.mqttv3.jar(src)
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.3!logback-classic.jar(src)
+[debug] 	[NOT REQUIRED] org.slf4j#slf4j-simple;1.6.2!slf4j-simple.jar(src)
+[debug] :: resolution report :: resolve 4064ms :: artifacts dl 152ms
 [debug] 	report for mainrunner#mainrunner$sources;0.1.0-SNAPSHOT compile produced in /home/luca/AppOnibusFlinkBackEnd/mainRunner/target/scala-2.12/resolution-cache/reports/mainrunner-mainrunner$sources-compile.xml
 [debug] 	report for mainrunner#mainrunner$sources;0.1.0-SNAPSHOT runtime produced in /home/luca/AppOnibusFlinkBackEnd/mainRunner/target/scala-2.12/resolution-cache/reports/mainrunner-mainrunner$sources-runtime.xml
 [debug] 	report for mainrunner#mainrunner$sources;0.1.0-SNAPSHOT test produced in /home/luca/AppOnibusFlinkBackEnd/mainRunner/target/scala-2.12/resolution-cache/reports/mainrunner-mainrunner$sources-test.xml
@@ -10503,4 +10503,4 @@
 [debug] 	report for mainrunner#mainrunner$sources;0.1.0-SNAPSHOT plugin produced in /home/luca/AppOnibusFlinkBackEnd/mainRunner/target/scala-2.12/resolution-cache/reports/mainrunner-mainrunner$sources-plugin.xml
 [debug] 	report for mainrunner#mainrunner$sources;0.1.0-SNAPSHOT pom produced in /home/luca/AppOnibusFlinkBackEnd/mainRunner/target/scala-2.12/resolution-cache/reports/mainrunner-mainrunner$sources-pom.xml
 [debug] 	report for mainrunner#mainrunner$sources;0.1.0-SNAPSHOT scala-tool produced in /home/luca/AppOnibusFlinkBackEnd/mainRunner/target/scala-2.12/resolution-cache/reports/mainrunner-mainrunner$sources-scala-tool.xml
-[debug] 	resolve done (4098ms resolve - 165ms download)
+[debug] 	resolve done (4064ms resolve - 152ms download)

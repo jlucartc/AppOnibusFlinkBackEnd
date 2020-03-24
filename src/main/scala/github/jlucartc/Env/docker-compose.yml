@@ -19,9 +19,13 @@ services:
       - "6123"
     ports:
       - "8081:8081"
-    command: jobmanager
+    entrypoint: /bin/sh -c
+    command:
+      - /bin/sh /docker-entrypoint.sh jobmanager
     environment:
       - JOB_MANAGER_RPC_ADDRESS=jobmanager
+    env_file:
+      - .env
 
   taskmanager:
     image: ${FLINK_DOCKER_IMAGE_NAME:-flink}
@@ -30,13 +34,18 @@ services:
       - "6122"
     depends_on:
       - jobmanager
-    command: taskmanager
+    entrypoint: /bin/sh -c
+    command:
+      - /bin/sh /docker-entrypoint.sh taskmanager
+      - chmod -R 777 /home/createdFiles
     links:
       - "jobmanager:jobmanager"
     environment:
       - JOB_MANAGER_RPC_ADDRESS=jobmanager
     env_file:
       - .env
+    volumes:
+      - /var/tmp/createdFiles:/home/createdFiles
   db:
     image: postgres
     restart: always

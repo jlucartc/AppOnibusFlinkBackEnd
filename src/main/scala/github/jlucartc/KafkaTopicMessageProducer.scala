@@ -1,9 +1,9 @@
 package github.jlucartc
 
 import java.util.Properties
-import java.util.concurrent.ArrayBlockingQueue
+import java.util.concurrent.{ArrayBlockingQueue, ExecutionException}
 
-import org.apache.kafka.clients.producer.{KafkaProducer, Producer, ProducerRecord}
+import org.apache.kafka.clients.producer.{KafkaProducer, Producer, ProducerRecord, RecordMetadata}
 
 /*
 
@@ -35,7 +35,22 @@ class KafkaTopicMessageProducer(buffer : ArrayBlockingQueue[String], props: Prop
         
         val record : ProducerRecord[String,String] = new ProducerRecord(topic,msg)
         
-        producer.send(record)
+        val status = producer.send(record)
+        
+        try {
+            
+            val metadata = status.get()
+            
+            if(metadata != null && metadata.getClass == classOf[RecordMetadata]){
+                
+                println(metadata.toString)
+                
+            }
+            
+        }catch{
+            case e : InterruptedException => { println("Kafka producer error"); e.printStackTrace() }
+            case e : ExecutionException => { println("Kafka producer error"); e.printStackTrace() }
+        }
         producer.close()
         
     }

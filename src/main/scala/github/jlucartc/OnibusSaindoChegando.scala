@@ -62,7 +62,7 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
                     closerPtDistance = distancia(row.latitude,row.longitude,value.latitude,value.longitude)
                     closerPtName = row.nome
 
-                }else if( distancia(row.latitude,row.longitude,value.latitude,value.longitude) < closerPtDistance && onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId.toString).ultimoPontoId != closerPtName){
+                }else if( distancia(row.latitude,row.longitude,value.latitude,value.longitude) < closerPtDistance && onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId.toString) != null&& onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId.toString).ultimoPontoId != closerPtName){
 
                     closerPtDistance = distancia(row.latitude,row.longitude,value.latitude,value.longitude)
                     closerPtName = row.nome
@@ -71,16 +71,21 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
 
             })
 
-            if(oldEvento.isSaindo){
+            if(oldEvento != null && oldEvento.isSaindo){
 
                 onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,false,closerPtName))
                 out.collect((closerPtName,"entrando",ctx.timestamp()).toString())
 
-            }else{
+            }else if(oldEvento != null){
 
                 onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,true,closerPtName))
                 out.collect((closerPtName,"saindo",ctx.timestamp()).toString())
 
+            }else{
+    
+                onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,false,closerPtName))
+                out.collect((closerPtName,"entrando",ctx.timestamp()).toString())
+                
             }
 
 
@@ -110,16 +115,21 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
 
             })
 
-            if(oldEvento.isSaindo){
+            if(oldEvento != null && oldEvento.isSaindo){
 
                 onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,false,closerPtName))
                 out.collect((closerPtName,"entrando",ctx.timestamp()).toString())
 
-            }else{
+            }else if(oldEvento != null){
 
                 onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,true,closerPtName))
                 out.collect((closerPtName,"saindo",ctx.timestamp()).toString())
 
+            }else{
+    
+                onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,false,closerPtName))
+                out.collect((closerPtName,"entrando",ctx.timestamp()).toString())
+                
             }
 
         }

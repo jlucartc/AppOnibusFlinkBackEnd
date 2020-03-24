@@ -2,17 +2,15 @@ package github.jlucartc
 
 import java.lang
 
-import org.apache.flink.streaming.connectors.kafka.KafkaSerializationSchema
-import org.apache.kafka.clients.producer.ProducerRecord
+import org.apache.flink.api.common.serialization.SerializationSchema
 
-class MyPayloadEncoder(topico : String) extends KafkaSerializationSchema[String]  {
-
-  override def serialize(element: String, timestamp: lang.Long): ProducerRecord[Array[Byte], Array[Byte]] = {
-
-    val record = new ProducerRecord[Array[Byte],Array[Byte]](topico,element.getBytes())
-
-    record
-
+class MyPayloadEncoder() extends SerializationSchema[String]{
+  
+  override def serialize(element: String): Array[Byte] = {
+  
+    //val record = new ProducerRecord[Array[Byte],Array[Byte]](topico,topic.getBytes())
+  
+    element.getBytes()
+    
   }
-
 }
