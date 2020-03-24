@@ -68,10 +68,10 @@ class Pipeline {
     
     var stream : DataStream[String] = env.addSource(new FlinkKafkaConsumer[String](onibusInputTopic,new SimpleStringSchema(),consumerprops)).uid("KafkaConsumerInput")
     
-    /*var tupleStream : DataStream[OnibusData] = stream
+    var tupleStream : DataStream[OnibusData] = stream
     .map(new S2TMapFunction()).uid("S2TMapFunction").name("S2TMapFunction")
     .assignTimestampsAndWatermarks(new PlacasPunctualTimestampAssigner()).uid("PlacasPunctualTimestampAssigner")
-    .keyBy(new TupleKeySelector())*/
+    .keyBy(new TupleKeySelector())
     
     //var newTupleStream = tupleStream.process(new OnibusSaindoChegando(timeBetweenQueries)).uid("FollowDetectorProcessFunction").name("newTupleStream")
     

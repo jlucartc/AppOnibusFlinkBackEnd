@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="839b1f49-5d75-468a-b5a5-935975309142" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/github/jlucartc/Functions/S2TMapFunction.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/github/jlucartc/Functions/S2TMapFunction.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/github/jlucartc/Pipeline.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/github/jlucartc/Pipeline.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/github/jlucartc/Env/.env" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/github/jlucartc/Env/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/github/jlucartc/Env/env.sh" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/github/jlucartc/Env/env.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/github/jlucartc/Functions/S2TMapFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/github/jlucartc/Pipeline.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +108,7 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$USER_HOME$/testflinktemplate" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../testflinktemplate" value="PREVIEW" />
       </map>
     </option>
   </component>
@@ -125,18 +131,18 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="449" y="154" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1584741398322">
+    <state x="449" y="154" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1585086493249">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="449" y="154" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/67.27.1299.741@67.27.1299.741" timestamp="1584741398322" />
+    <state x="449" y="154" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/67.27.1299.741@67.27.1299.741" timestamp="1585086493249" />
     <state x="524" y="97" width="374" height="599" key="#com.intellij.ide.util.MemberChooser" timestamp="1585049706521">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="524" y="97" width="374" height="599" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1585049706521" />
-    <state x="81" y="27" width="1261" height="741" key="CommitChangelistDialog2" timestamp="1585048267035">
+    <state x="81" y="27" width="1261" height="741" key="CommitChangelistDialog2" timestamp="1585086737830">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="81" y="27" width="1261" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1585048267035" />
+    <state x="81" y="27" width="1261" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1585086737830" />
     <state x="205" y="31" key="SettingsEditor" timestamp="1584568953386">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
