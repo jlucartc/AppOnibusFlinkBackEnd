@@ -5,7 +5,9 @@ Bus event processing application made with Apache Flink.
 ## Setup
 
 This job needs some configuration variables to be set on the environment. These variables will configure Kafka consumers
-and producers, Flink connectors and pipeline behaviour. Here's a simple guide to each group of variables.
+and producers, Flink connectors and pipeline behaviour. Here's a simple guide to each group of variables. You may find all
+these variables in a single file in `src/main/scala/github/jlucartc/Env/.env.model`. If you'd rather put these variables
+manually in some place like `/etc/profile.d/` or so, there's a `src/main/scala/github/jlucartc/Env/env.sh.model` file.
 
 #### MQTT variables configuration
 MQTT is an [application layer protocol](https://en.wikipedia.org/wiki/MQTT) which is of common use in IoT communication.
