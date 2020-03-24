@@ -80,7 +80,7 @@ class Pipeline {
     //newTupleStream.addSink(kafkaProducer)
     stream.addSink(kafkaProducer).name("KafkaProducer").uid("KafkaProducer")
     
-    stream.writeAsText("/home/createdFiles/stream",FileSystem.WriteMode.OVERWRITE).name("StreamOutputFile").uid("StreamOutputFile")
+    stream.writeAsText(outputFileURL1,FileSystem.WriteMode.OVERWRITE).name("StreamOutputFile").uid("StreamOutputFile")
     //tupleStream.writeAsText("/home/luca/createdFiles/tupleStream",FileSystem.WriteMode.OVERWRITE).name("TupleStreamOutputFile").uid("TupleStreamOutputFile")
     
     println("Pipeline begin...")
