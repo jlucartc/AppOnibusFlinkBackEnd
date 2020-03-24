@@ -68,7 +68,7 @@ GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_CONFIG_OUTPUTFILEURL2=
 ### Docker setup
 There's a `docker-compose.yml` file in `src/main/scala/github/jlucartc/Env` which can be used to deploy all necessary
 services as docker containers. This guide doesn't have a Kubernetes or Docker Swarm guide ready yet, so this project is
-intended to be run directly by setting the docker-compose file up directly. The steps are these:
+intended to be run by setting the docker-compose file up directly. The steps are these:
 
 1. Copy `src/main/scala/github/jlucartc/Env/.env.model` to `src/main/scala/github/jlucartc/Env/.env` and fill in all
    environment variables in it.<br>
