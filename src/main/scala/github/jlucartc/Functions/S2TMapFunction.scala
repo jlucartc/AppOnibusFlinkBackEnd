@@ -10,7 +10,9 @@ import org.apache.flink.api.common.functions.MapFunction
 class S2TMapFunction() extends MapFunction[String,OnibusData]{
     override def map(value: String): OnibusData = {
         
-        val fieldsArray = value.split(' ')(1).split(',')
+        val fieldsArray = value.substring(1,value.length-1).split(',')
+        
+        println("\n\nfieldsArray: "+fieldsArray.mkString(" | ")+"\n\n")
         
         val isRetry : String = fieldsArray(5).split(':')(0)
         
@@ -31,10 +33,16 @@ class S2TMapFunction() extends MapFunction[String,OnibusData]{
             val coordsBytes = payload.split(':')(1).replaceAllLiterally("\"","").getBytes()
             
             val coordsStr  = new String(Base64.getDecoder.decode(coordsBytes)).replaceAllLiterally(" ","")
+    
+            println("\n\ncoordsStr: "+coordsStr+"\n\n")
             
             val coords = coordsStr.slice(0,coordsStr.length-1).split(';')
             
             val leftFields = fieldsArray.slice(0,5)
+    
+            println("\n\ncoords: "+coords.mkString(" | ")+"\n\n")
+    
+            println("\n\nleftFields: "+leftFields.mkString(" | ")+"\n\n")
             
             rawFieldsArray = leftFields ++ Array(newField,payload,"\"latitude\":"+coords(0),"\"longitude\":"+coords(1))
             

@@ -49,8 +49,13 @@ services:
   db:
     image: postgres
     restart: always
-    environment:
-      POSTGRES_PASSWORD: example
+    env_file:
+      - postgres-setup.env
+    entrypoint: /bin/sh -c
+    command:
+      - /docker-entrypoint.sh postgres
+    volumes:
+      - /var/tmp/postgres-sql-import.d:/docker-entrypoint-initdb.d
 
   adminer:
     image: adminer

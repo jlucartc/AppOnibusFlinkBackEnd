@@ -29,6 +29,7 @@ class MQTTMessageConsumer(buffer: ArrayBlockingQueue[String],props : Properties)
 
         options.setUserName(user)
         options.setPassword(password)
+        options.setCleanSession(false)
 
         val callback = new MqttCallback {
     
@@ -43,7 +44,7 @@ class MQTTMessageConsumer(buffer: ArrayBlockingQueue[String],props : Properties)
             
                 } else {
             
-                    println("Receiving Data, Topic : %s, Message : %s".format(topic, message))
+                    println("%s".format(message))
                     buffer.put(message.toString)
             
                 }

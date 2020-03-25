@@ -7,6 +7,7 @@ import Model.{OnibusData, Posicao, UltimoEvento}
 import org.apache.flink.api.common.state._
 import org.apache.flink.streaming.api.functions.ProcessFunction
 import org.apache.flink.util.Collector
+import org.postgresql.Driver
 
 
 class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[OnibusData,(String)]{
@@ -20,33 +21,48 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
     private var onibusUltimoEvento : MapState[String,UltimoEvento] = _
 
     override def processElement(value: OnibusData, ctx: ProcessFunction[OnibusData,(String)]#Context, out: Collector[(String)]): Unit = {
-
+    
+        /*
+       
+            Se a variável 'timeBetweenQuery' não estiver inicializada, então todas as variáveis ainda não foram
+            inicializadas.
+       
+        */
+        
         if(timeBetweenQuery == null){
 
-          timeBetweenQuery = getRuntimeContext.getState(new ValueStateDescriptor[Long]("github.jlucartc.OnibusSaindoChegando.timeBetweenQuery",classOf[Long]))
-          timeCounter = getRuntimeContext.getState(new ValueStateDescriptor[Long]("github.jlucartc.OnibusSaindoChegando.timeCounter",classOf[Long]))
-          pointList = getRuntimeContext.getListState[Posicao](new ListStateDescriptor[Posicao]("github.jlucartc.OnibusSaindoChegando.rowList",classOf[Posicao]))
-          onibusUltimoEvento = getRuntimeContext.getMapState[String,UltimoEvento](new MapStateDescriptor[String,UltimoEvento]("OnibusSaindoChegand& onibusUltimoEvento",classOf[String],classOf[UltimoEvento]))
-          timeBetweenQuery.update(timeBetweenQueries)
+            timeBetweenQuery = getRuntimeContext.getState(new ValueStateDescriptor[Long]("github.jlucartc.OnibusSaindoChegando.timeBetweenQuery",classOf[Long]))
+            timeCounter = getRuntimeContext.getState(new ValueStateDescriptor[Long]("github.jlucartc.OnibusSaindoChegando.timeCounter",classOf[Long]))
+            pointList = getRuntimeContext.getListState[Posicao](new ListStateDescriptor[Posicao]("github.jlucartc.OnibusSaindoChegando.rowList",classOf[Posicao]))
+            onibusUltimoEvento = getRuntimeContext.getMapState[String,UltimoEvento](new MapStateDescriptor[String,UltimoEvento]("OnibusSaindoChegand& onibusUltimoEvento",classOf[String],classOf[UltimoEvento]))
+            timeBetweenQuery.update(timeBetweenQueries)
+    
+            // Faz requisição
+            val res = queryDB()
+        
+            // Cria lista para receber novos pontos
+            val newList = new util.ArrayList[Posicao]()
+        
+            // Coloca pontos dentro da lista
+            while(res != null && res.next()){
+        
+                newList.add(Posicao(value.deviceId+"."+value.appId,value.latitude,value.longitude))
+        
+            }
+        
+            // Atualiza pontos
+            pointList.update(newList)
 
         }
-
+    
+        /*
+        
+         Se o contador não tiver chegado ao valor especificado, procede normalmente
+        
+        */
         if(timeBetweenQuery.value() <= timeCounter.value()){
 
             timeCounter.update(0)
-
-            val res = queryDB()
-
-            val newList = new util.ArrayList[Posicao]()
-
-            while(res.next()){
-
-                newList.add(Posicao(value.deviceId+"."+value.appId,value.latitude,value.longitude))
-                //pointList.update()add(Posicao(value.deviceId+"."+value.appId,value.latitude,value.longitude))
-                
-            }
-
-            pointList.update(newList)
 
             var closerPtName = ""
             var closerPtDistance : Double = 0
@@ -87,11 +103,32 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
                 out.collect((closerPtName,"entrando",ctx.timestamp()).toString())
                 
             }
-
-
-
+        
+        /*
+        
+         Se o contador tiver chegado ao valor especifidado, uma consulta ao banco é feita para atualizar os pontos
+         
+        */
         }else{
-
+            
+            timeCounter.update(timeCounter.value()+1)
+    
+            // Faz requisição
+            val res = queryDB()
+    
+            // Cria lista para receber novos pontos
+            val newList = new util.ArrayList[Posicao]()
+    
+            // Coloca pontos dentro da lista
+            while(res != null && res.next()){
+        
+                newList.add(Posicao(value.deviceId+"."+value.appId,value.latitude,value.longitude))
+        
+            }
+    
+            // Atualiza pontos
+            pointList.update(newList)
+            
             var closerPtName = ""
             var closerPtDistance : Double = 0
             var oldEvento : UltimoEvento = onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId.toString)
@@ -152,6 +189,8 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
     
     def queryDB(): ResultSet = {
     
+        println("Querying...")
+        
         var connection : Connection = null
     
         val url = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_POSTGRES_URL")  match {
@@ -178,9 +217,16 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
             case None => { "" }
 
         }
+        
+        val table = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_POSTGRES_APP_TABLE") match {
+    
+            case Some(res) => { res }
+            case None => { "" }
+    
+        }
 
         var resultSet : ResultSet = null
-        val query = "SELECT * FROM user"
+        val query = "SELECT * FROM "+table
     
         try {
             // make the connection
@@ -195,7 +241,11 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
             case e: Exception => e.printStackTrace
         }
         
-        connection.close()
+        if(connection != null){
+    
+            connection.close()
+            
+        }
         
         resultSet
     

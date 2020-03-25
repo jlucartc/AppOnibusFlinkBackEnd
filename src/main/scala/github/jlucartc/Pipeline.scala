@@ -44,7 +44,7 @@ class Pipeline {
     val inputFileURL1 = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_CONFIG_INPUTFILEURL1") match { case Some(res) => {res} case None => { "" } }
     val outputFileURL1 = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_CONFIG_OUTPUTFILEURL1") match { case Some(res) => {res} case None => { "" } }
     val outputFileURL2 = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_CONFIG_OUTPUTFILEURL2") match { case Some(res) => {res} case None => { "" } }
-    val timeBetweenQueries = 10000
+    val timeBetweenQueries = 1
     
     val env = StreamExecutionEnvironment.getExecutionEnvironment
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
@@ -73,7 +73,7 @@ class Pipeline {
     .assignTimestampsAndWatermarks(new PlacasPunctualTimestampAssigner()).uid("PlacasPunctualTimestampAssigner")
     .keyBy(new TupleKeySelector())
     
-    //var newTupleStream = tupleStream.process(new OnibusSaindoChegando(timeBetweenQueries)).uid("FollowDetectorProcessFunction").name("newTupleStream")
+    var newTupleStream = tupleStream.process(new OnibusSaindoChegando(timeBetweenQueries)).uid("FollowDetectorProcessFunction").name("newTupleStream")
     
     val kafkaProducer = new FlinkKafkaProducer[String](bootstrapServers,onibusOutputTopic,new SimpleStringSchema())
     kafkaProducer.setWriteTimestampToKafka(true)
@@ -81,7 +81,7 @@ class Pipeline {
     stream.addSink(kafkaProducer).name("KafkaProducer").uid("KafkaProducer")
     
     stream.writeAsText(outputFileURL1,FileSystem.WriteMode.OVERWRITE).name("StreamOutputFile").uid("StreamOutputFile")
-    //tupleStream.writeAsText("/home/luca/createdFiles/tupleStream",FileSystem.WriteMode.OVERWRITE).name("TupleStreamOutputFile").uid("TupleStreamOutputFile")
+    tupleStream.writeAsText(outputFileURL2,FileSystem.WriteMode.OVERWRITE).name("TupleStreamOutputFile").uid("TupleStreamOutputFile")
     
     println("Pipeline begin...")
     

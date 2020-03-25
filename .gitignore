@@ -1,2 +1,3 @@
 src/main/scala/github/jlucartc/Env/env.sh
 src/main/scala/github/jlucartc/Env/.env
+src/main/scala/github/jlucartc/Env/postgres-setup.env
