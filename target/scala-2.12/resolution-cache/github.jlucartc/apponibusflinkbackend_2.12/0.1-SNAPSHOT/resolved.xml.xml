@@ -4,7 +4,7 @@
 		module="apponibusflinkbackend_2.12"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20200324104648"
+		publication="20200326092404"
 	>
 		<description>
 		AppOnibusFlinkBackEnd

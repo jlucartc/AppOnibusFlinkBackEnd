@@ -2,7 +2,16 @@
 
 Bus event processing application made with Apache Flink.
 
-## Setup
+## General observations
+
+1. You should rename all `.model` configuration files if you wanna run the application.
+E.g. : rename `.env.model` file to `.env` before running.<br>
+2. Don't forget to fill in all configuration files mentioned in this guide.<br>
+3. There should be at least one `Kafka` container running in the port range from `60000` through `60004`. If there's none, 
+the brokers will not be discovered by the application.
+
+
+## Kafka and Flink Setup
 
 This job needs some configuration variables to be set on the environment. These variables will configure Kafka consumers
 and producers, Flink connectors and pipeline behaviour. Here's a simple guide to each group of variables. You may find all
@@ -65,14 +74,32 @@ GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_CONFIG_OUTPUTFILEURL1=
 GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_CONFIG_OUTPUTFILEURL2=
 ```
 
-### Docker setup
+## Docker setup
 There's a `docker-compose.yml` file in `src/main/scala/github/jlucartc/Env` which can be used to deploy all necessary
-services as docker containers. This guide doesn't have a Kubernetes or Docker Swarm guide ready yet, so this project is
+services as docker containers. This guide doesn't have a Kubernetes or Docker Swarm guide section ready yet, so this project is
 intended to be run by setting the docker-compose file up directly. The steps are these:
 
 1. Copy `src/main/scala/github/jlucartc/Env/.env.model` to `src/main/scala/github/jlucartc/Env/.env` and fill in all
-   environment variables in it.<br>
+   environment variables in it (or just rename it).<br>
 2. execute `sudo docker-compose -f src/main/scala/github/jlucartc/Env/docker-compose.yml up -d` to create all
    necessary containers.<br>
-3. Build the project and execute `sbt assembly` to generate a `.jar` file in `/target/scala-<scala-version>/`<br>
-4. Access `localhost:8081`, submit the `.jar` file and execute it.
+3. (Optional) execute the previous commando with `--scale kafka=N` or `--scale taskmanager=N` to scale any of these services.
+4. Build the project and execute `sbt assembly` to generate a `.jar` file in `/target/scala-<scala-version>/`<br>
+5. Access `localhost:8081`, submit the `.jar` file and execute it.
+
+## Postgres Setup
+
+Postgres has it's own `.env` file in `src/main/scala/github/jlucartc/Env/postgres-setup.env.model`.
+Apart from it, it may be necessary to change some fields inside `docker-compose.yml`, if you already have a postgres
+instance running in your `5432` port, for example.
+
+Since it isn't possible to send some files to the container using `docker-compose.yml`'s options yet, you should create the directory `/var/tmp/postgres-sql-import.d`
+in your local machine and put your `.sql` files there <b>before instantiating the services</b>, if you wanna import your database schema.
+You may also change it's path by changing the `SOURCE` side of the `SOURCE:TARGET` in it's `volume` option.
+Here goes Postgres' environment variables:
+
+```
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+```

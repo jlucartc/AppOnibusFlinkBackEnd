@@ -46,7 +46,7 @@ services:
       - .env
     volumes:
       - /var/tmp/createdFiles:/home/createdFiles
-  db:
+  postgres:
     image: postgres
     restart: always
     env_file:
@@ -58,8 +58,3 @@ services:
       - /var/tmp/postgres-sql-import.d:/docker-entrypoint-initdb.d
     ports:
       - 5433:5432
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
