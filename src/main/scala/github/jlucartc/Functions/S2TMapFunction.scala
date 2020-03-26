@@ -12,8 +12,6 @@ class S2TMapFunction() extends MapFunction[String,OnibusData]{
         
         val fieldsArray = value.substring(1,value.length-1).split(',')
         
-        println("\n\nfieldsArray: "+fieldsArray.mkString(" | ")+"\n\n")
-        
         val isRetry : String = fieldsArray(5).split(':')(0)
         
         var metadata: String = ""
@@ -33,16 +31,10 @@ class S2TMapFunction() extends MapFunction[String,OnibusData]{
             val coordsBytes = payload.split(':')(1).replaceAllLiterally("\"","").getBytes()
             
             val coordsStr  = new String(Base64.getDecoder.decode(coordsBytes)).replaceAllLiterally(" ","")
-    
-            println("\n\ncoordsStr: "+coordsStr+"\n\n")
             
             val coords = coordsStr.slice(0,coordsStr.length-1).split(';')
             
             val leftFields = fieldsArray.slice(0,5)
-    
-            println("\n\ncoords: "+coords.mkString(" | ")+"\n\n")
-    
-            println("\n\nleftFields: "+leftFields.mkString(" | ")+"\n\n")
             
             rawFieldsArray = leftFields ++ Array(newField,payload,"\"latitude\":"+coords(0),"\"longitude\":"+coords(1))
             
@@ -61,7 +53,6 @@ class S2TMapFunction() extends MapFunction[String,OnibusData]{
         rawFieldsArray = (rawFieldsArray ++ Array(timestamp)).mkString(",").replaceAllLiterally("{","").split(',')
         
         val formatter: DateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
-        println("\n\n"+rawFieldsArray(9).split("\\\"time\\\":")(1)+"\n\n")
         val date: Date = formatter.parse(rawFieldsArray(9).split("\\\"time\\\":")(1).replaceAllLiterally("\"",""));
         val timeStampDate: Long = date.getTime
         

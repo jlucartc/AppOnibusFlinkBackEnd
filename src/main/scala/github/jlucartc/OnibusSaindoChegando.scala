@@ -45,8 +45,10 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
         
             // Coloca pontos dentro da lista
             while(res != null && res.next()){
-        
-                newList.add(Posicao(value.deviceId+"."+value.appId,value.latitude,value.longitude))
+    
+                println(Posicao(res.getString("nome"),res.getDouble("latitude"),res.getDouble("longitude")))
+    
+                newList.add(Posicao(res.getString("nome"),res.getDouble("latitude"),res.getDouble("longitude")))
         
             }
         
@@ -66,7 +68,7 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
 
             var closerPtName = ""
             var closerPtDistance : Double = 0
-            var oldEvento : UltimoEvento = onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId.toString)
+            val oldEvento : UltimoEvento = onibusUltimoEvento.get(value.deviceId+"."+value.appId)
             var startingValue = 0
 
 
@@ -78,29 +80,43 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
                     closerPtDistance = distancia(row.latitude,row.longitude,value.latitude,value.longitude)
                     closerPtName = row.nome
 
-                }else if( distancia(row.latitude,row.longitude,value.latitude,value.longitude) < closerPtDistance && onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId.toString) != null&& onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId.toString).ultimoPontoId != closerPtName){
+                }else if( distancia(row.latitude,row.longitude,value.latitude,value.longitude) < closerPtDistance && onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId) != null && onibusUltimoEvento.get(value.deviceId+"."+value.appId).ultimoPontoId != closerPtName){
 
                     closerPtDistance = distancia(row.latitude,row.longitude,value.latitude,value.longitude)
                     closerPtName = row.nome
 
+                }else if( distancia(row.latitude,row.longitude,value.latitude,value.longitude) < closerPtDistance && onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId) == null ){
+    
+                    closerPtDistance = distancia(row.latitude,row.longitude,value.latitude,value.longitude)
+                    closerPtName = row.nome
+                    
                 }
 
             })
 
             if(oldEvento != null && oldEvento.isSaindo){
 
-                onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,false,closerPtName))
-                out.collect((closerPtName,"entrando",ctx.timestamp()).toString())
+                if(closerPtName == oldEvento.ultimoPontoId){
+    
+                    onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,true,closerPtName))
+                    out.collect((value.deviceId+"."+value.appId,closerPtName,"saindo",ctx.timestamp()).toString())
+                    
+                }else{
+    
+                    onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,false,closerPtName))
+                    out.collect((value.deviceId+"."+value.appId,closerPtName,"entrando",ctx.timestamp()).toString())
+                    
+                }
 
-            }else if(oldEvento != null){
-
+            }else if(oldEvento != null && !oldEvento.isSaindo){
+                
                 onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,true,closerPtName))
-                out.collect((closerPtName,"saindo",ctx.timestamp()).toString())
+                out.collect((value.deviceId+"."+value.appId,closerPtName,"saindo",ctx.timestamp()).toString())
 
             }else{
     
                 onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,false,closerPtName))
-                out.collect((closerPtName,"entrando",ctx.timestamp()).toString())
+                out.collect((value.deviceId+"."+value.appId,closerPtName,"entrando",ctx.timestamp()).toString())
                 
             }
         
@@ -121,8 +137,10 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
     
             // Coloca pontos dentro da lista
             while(res != null && res.next()){
+                
+                println(Posicao(res.getString("nome"),res.getDouble("latitude"),res.getDouble("longitude")))
         
-                newList.add(Posicao(value.deviceId+"."+value.appId,value.latitude,value.longitude))
+                newList.add(Posicao(res.getString("nome"),res.getDouble("latitude"),res.getDouble("longitude")))
         
             }
     
@@ -131,7 +149,7 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
             
             var closerPtName = ""
             var closerPtDistance : Double = 0
-            var oldEvento : UltimoEvento = onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId.toString)
+            val oldEvento : UltimoEvento = onibusUltimoEvento.get(value.deviceId.toString+"."+value.appId.toString)
             var startingValue = 0
 
 
@@ -151,21 +169,30 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends ProcessFunction[On
                 }
 
             })
-
+    
             if(oldEvento != null && oldEvento.isSaindo){
-
-                onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,false,closerPtName))
-                out.collect((closerPtName,"entrando",ctx.timestamp()).toString())
-
-            }else if(oldEvento != null){
-
+        
+                if(closerPtName == oldEvento.ultimoPontoId){
+            
+                    onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,true,closerPtName))
+                    out.collect((value.deviceId+"."+value.appId,closerPtName,"saindo",ctx.timestamp()).toString())
+            
+                }else{
+            
+                    onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,false,closerPtName))
+                    out.collect((value.deviceId+"."+value.appId,closerPtName,"entrando",ctx.timestamp()).toString())
+            
+                }
+        
+            }else if(oldEvento != null && !oldEvento.isSaindo){
+        
                 onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,true,closerPtName))
-                out.collect((closerPtName,"saindo",ctx.timestamp()).toString())
-
+                out.collect((value.deviceId+"."+value.appId,closerPtName,"saindo",ctx.timestamp()).toString())
+        
             }else{
     
                 onibusUltimoEvento.put(value.deviceId.toString+"."+value.appId.toString,UltimoEvento(value.deviceId.toString+"."+value.appId.toString,false,closerPtName))
-                out.collect((closerPtName,"entrando",ctx.timestamp()).toString())
+                out.collect((value.deviceId+"."+value.appId,closerPtName,"entrando",ctx.timestamp()).toString())
                 
             }
 

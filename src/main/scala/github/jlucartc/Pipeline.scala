@@ -23,7 +23,7 @@ class Pipeline {
     val timeLimitSeconds = 120
     val seconds = 421
     val parallelism = 1
-    val checkPointingTimeInterval = 1000
+    val checkPointingTimeInterval = 10
     val restartAttempts = 1
     val timeBeforeRetry = 10000
     val transactionTimeout = 20000
@@ -78,7 +78,7 @@ class Pipeline {
     val kafkaProducer = new FlinkKafkaProducer[String](bootstrapServers,onibusOutputTopic,new SimpleStringSchema())
     kafkaProducer.setWriteTimestampToKafka(true)
     //newTupleStream.addSink(kafkaProducer)
-    stream.addSink(kafkaProducer).name("KafkaProducer").uid("KafkaProducer")
+    newTupleStream.addSink(kafkaProducer).name("KafkaProducer").uid("KafkaProducer")
     
     stream.writeAsText(outputFileURL1,FileSystem.WriteMode.OVERWRITE).name("StreamOutputFile").uid("StreamOutputFile")
     tupleStream.writeAsText(outputFileURL2,FileSystem.WriteMode.OVERWRITE).name("TupleStreamOutputFile").uid("TupleStreamOutputFile")

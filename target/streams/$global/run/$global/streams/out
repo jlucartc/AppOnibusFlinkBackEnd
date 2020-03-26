@@ -1,10 +1,10 @@
 [0m[[0m[0minfo[0m] [0m[0mRunning (fork) github.jlucartc.Main [0m
 [0m[[0m[0minfo[0m] [0m[0mPipeline setup...[0m
 [0m[[0m[0minfo[0m] [0m[0mACKS: all[0m
+[0m[[0m[0minfo[0m] [0m[0mRun...[0m
 [0m[[0m[31merror[0m] [0m[0mSLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".[0m
 [0m[[0m[31merror[0m] [0m[0mSLF4J: Defaulting to no-operation (NOP) logger implementation[0m
 [0m[[0m[31merror[0m] [0m[0mSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.[0m
-[0m[[0m[0minfo[0m] [0m[0mRun...[0m
 [0m[[0m[0minfo[0m] [0m[0mRun...[0m
 [0m[[0m[0minfo[0m] [0m[0mSetting callback...[0m
 [0m[[0m[31merror[0m] [0m[0mWARNING: An illegal reflective access operation has occurred[0m
@@ -13,12 +13,49 @@
 [0m[[0m[31merror[0m] [0m[0mWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations[0m
 [0m[[0m[31merror[0m] [0m[0mWARNING: All illegal access operations will be denied in a future release[0m
 [0m[[0m[0minfo[0m] [0m[0mPipeline begin...[0m
-[0m[[0m[0minfo[0m] [0m[0mReceiving Data, Topic : bus_gps_data/devices/gps_sensor_1/up, Message : {"app_id":"bus_gps_data","dev_id":"gps_sensor_1","hardware_serial":"00BCFDFD19DF5587","port":1,"counter":0,"payload_raw":"EREREQ==","metadata":{"time":"2020-03-24T13:50:32.788071031Z"}}[0m
-[0m[[0m[0minfo[0m] [0m[0monibus-raw-data-0@0[0m
-[0m[[0m[0minfo[0m] [0m[0mReceiving Data, Topic : bus_gps_data/devices/gps_sensor_1/up, Message : {"app_id":"bus_gps_data","dev_id":"gps_sensor_1","hardware_serial":"00BCFDFD19DF5587","port":1,"counter":0,"payload_raw":"EREREQ==","metadata":{"time":"2020-03-24T13:50:33.081932052Z"}}[0m
-[0m[[0m[0minfo[0m] [0m[0monibus-raw-data-0@1[0m
-[0m[[0m[0minfo[0m] [0m[0mReceiving Data, Topic : bus_gps_data/devices/gps_sensor_1/up, Message : {"app_id":"bus_gps_data","dev_id":"gps_sensor_1","hardware_serial":"00BCFDFD19DF5587","port":1,"counter":0,"payload_raw":"EREREQ==","metadata":{"time":"2020-03-24T13:50:33.31763104Z"}}[0m
-[0m[[0m[0minfo[0m] [0m[0monibus-raw-data-0@2[0m
-[0m[[0m[0minfo[0m] [0m[0mReceiving Data, Topic : bus_gps_data/devices/gps_sensor_1/up, Message : {"app_id":"bus_gps_data","dev_id":"gps_sensor_1","hardware_serial":"00BCFDFD19DF5587","port":1,"counter":0,"payload_raw":"EREREQ==","metadata":{"time":"2020-03-24T13:50:33.548175829Z"}}[0m
-[0m[[0m[0minfo[0m] [0m[0monibus-raw-data-0@3[0m
+[0m[[0m[0minfo[0m] [0m[0m{"app_id":"bus_gps_data","dev_id":"gps_sensor_1","hardware_serial":"00BCFDFD19DF5587","port":1,"counter":0,"payload_raw":"LTMuNzM4Mjg1Oy0zOC41NzAxMzY=","metadata":{"time":"2020-03-26T19:59:04.386627644Z"}}[0m
+[0m[[0m[0minfo[0m] [0m[0monibus-raw-data-0@4[0m
+[0m[[0m[0minfo[0m] [0m[0m(Watermark: ,2020-03-26 19:59:04.0)[0m
+[0m[[0m[0minfo[0m] [0m[0mQuerying...[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada Humberto Monte,-3.738693,-38.569711)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada acesso Mr. Hull,-3.739345,-38.572356)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada fitotecnia,-3.742514,-38.574987)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada CT,-3.745046,-38.576379)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada RU Novo,-3.746838,-38.577731)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada acesso IEFES,-3.74788,-38.57601)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada Matemática,-3.747166,-38.573734)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada RU Velho,-3.744992,-38.573128)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada BCT,-3.742825,-38.574727)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada acesso saída lateral,-3.739522,-38.572281)[0m
+[0m[[0m[0minfo[0m] [0m[0mQuerying...[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada Humberto Monte,-3.738693,-38.569711)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada acesso Mr. Hull,-3.739345,-38.572356)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada fitotecnia,-3.742514,-38.574987)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada CT,-3.745046,-38.576379)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada RU Novo,-3.746838,-38.577731)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada acesso IEFES,-3.74788,-38.57601)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada Matemática,-3.747166,-38.573734)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada RU Velho,-3.744992,-38.573128)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada BCT,-3.742825,-38.574727)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada acesso saída lateral,-3.739522,-38.572281)[0m
+[0m[[0m[0minfo[0m] [0m[0m{"app_id":"bus_gps_data","dev_id":"gps_sensor_1","hardware_serial":"00BCFDFD19DF5587","port":1,"counter":0,"payload_raw":"LTMuNzM4ODAwOy0zOC41NzE2ODY=","metadata":{"time":"2020-03-26T19:59:13.873808737Z"}}[0m
+[0m[[0m[0minfo[0m] [0m[0m(Watermark: ,2020-03-26 19:59:13.0)[0m
+[0m[[0m[0minfo[0m] [0m[0monibus-raw-data-0@5[0m
+[0m[[0m[0minfo[0m] [0m[0m{"app_id":"bus_gps_data","dev_id":"gps_sensor_1","hardware_serial":"00BCFDFD19DF5587","port":1,"counter":0,"payload_raw":"LTMuNzM4ODAwOy0zOC41NzE2ODY=","metadata":{"time":"2020-03-26T19:59:14.97413141Z"}}[0m
+[0m[[0m[0minfo[0m] [0m[0monibus-raw-data-0@6[0m
+[0m[[0m[0minfo[0m] [0m[0m(Watermark: ,2020-03-26 19:59:14.0)[0m
+[0m[[0m[0minfo[0m] [0m[0mQuerying...[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada Humberto Monte,-3.738693,-38.569711)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada acesso Mr. Hull,-3.739345,-38.572356)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada fitotecnia,-3.742514,-38.574987)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada CT,-3.745046,-38.576379)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada RU Novo,-3.746838,-38.577731)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada acesso IEFES,-3.74788,-38.57601)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada Matemática,-3.747166,-38.573734)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada RU Velho,-3.744992,-38.573128)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada BCT,-3.742825,-38.574727)[0m
+[0m[[0m[0minfo[0m] [0m[0mPosicao(Parada acesso saída lateral,-3.739522,-38.572281)[0m
+[0m[[0m[0minfo[0m] [0m[0m{"app_id":"bus_gps_data","dev_id":"gps_sensor_1","hardware_serial":"00BCFDFD19DF5587","port":1,"counter":0,"payload_raw":"LTMuNzM4ODAwOy0zOC41NzE2ODY=","metadata":{"time":"2020-03-26T19:59:15.89418473Z"}}[0m
+[0m[[0m[0minfo[0m] [0m[0m(Watermark: ,2020-03-26 19:59:15.0)[0m
+[0m[[0m[0minfo[0m] [0m[0monibus-raw-data-0@7[0m
 [0m[[0m[33mwarn[0m] [0m[0mRun canceled.[0m
