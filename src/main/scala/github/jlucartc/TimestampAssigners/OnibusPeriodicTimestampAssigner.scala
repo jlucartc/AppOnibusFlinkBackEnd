@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat
 import org.apache.flink.streaming.api.functions.AssignerWithPeriodicWatermarks
 import org.apache.flink.streaming.api.watermark.Watermark
 
-class PlacasPeriodicTimestampAssigner extends AssignerWithPeriodicWatermarks[(String,Double,Double,String,Int,Int)]{
+class OnibusPeriodicTimestampAssigner extends AssignerWithPeriodicWatermarks[(String,Double,Double,String,Int,Int)]{
    
     // Limite de atraso - 10000 ms
     private var limite = 10000

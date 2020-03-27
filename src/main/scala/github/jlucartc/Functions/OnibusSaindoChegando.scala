@@ -1,13 +1,12 @@
-package github.jlucartc
+package github.jlucartc.Functions
 
 import java.sql.{Connection, DriverManager, ResultSet}
 import java.util
 
-import Model.{OnibusData, Posicao, UltimoEvento}
+import github.jlucartc.Model.{OnibusData, Posicao, UltimoEvento}
 import org.apache.flink.api.common.state._
-import org.apache.flink.streaming.api.functions.{KeyedProcessFunction, ProcessFunction}
+import org.apache.flink.streaming.api.functions.KeyedProcessFunction
 import org.apache.flink.util.Collector
-import org.postgresql.Driver
 
 
 class OnibusSaindoChegando(timeBetweenQueries : Long) extends KeyedProcessFunction[String,OnibusData,String]{
@@ -33,10 +32,10 @@ class OnibusSaindoChegando(timeBetweenQueries : Long) extends KeyedProcessFuncti
         
         if(timeBetweenQuery == null){
             
-            timeBetweenQuery = getRuntimeContext.getState(new ValueStateDescriptor[Long]("github.jlucartc.OnibusSaindoChegando.timeBetweenQuery",classOf[Long]))
-            timeCounter = getRuntimeContext.getState(new ValueStateDescriptor[Long]("github.jlucartc.OnibusSaindoChegando.timeCounter",classOf[Long]))
-            pointList = getRuntimeContext.getListState[Posicao](new ListStateDescriptor[Posicao]("github.jlucartc.OnibusSaindoChegando.rowList",classOf[Posicao]))
-            onibusUltimoEvento = getRuntimeContext.getState[UltimoEvento](new ValueStateDescriptor[UltimoEvento]("github.jlucartc.OnibusSaindoChegando.onibusUltimoEvento",classOf[UltimoEvento]))
+            timeBetweenQuery = getRuntimeContext.getState(new ValueStateDescriptor[Long]("github.jlucartc.Functions.OnibusSaindoChegando.timeBetweenQuery",classOf[Long]))
+            timeCounter = getRuntimeContext.getState(new ValueStateDescriptor[Long]("github.jlucartc.Functions.OnibusSaindoChegando.timeCounter",classOf[Long]))
+            pointList = getRuntimeContext.getListState[Posicao](new ListStateDescriptor[Posicao]("github.jlucartc.Functions.OnibusSaindoChegando.rowList",classOf[Posicao]))
+            onibusUltimoEvento = getRuntimeContext.getState[UltimoEvento](new ValueStateDescriptor[UltimoEvento]("github.jlucartc.Functions.OnibusSaindoChegando.onibusUltimoEvento",classOf[UltimoEvento]))
             timeBetweenQuery.update(timeBetweenQueries)
             timeCounter.update(0)
             pointList.update(new util.ArrayList[Posicao]())

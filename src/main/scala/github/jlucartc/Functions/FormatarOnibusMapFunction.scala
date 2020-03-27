@@ -7,7 +7,7 @@ import java.util.{Base64, Date}
 import github.jlucartc.Model.OnibusData
 import org.apache.flink.api.common.functions.MapFunction
 
-class S2TMapFunction() extends MapFunction[String,OnibusData]{
+class FormatarOnibusMapFunction() extends MapFunction[String,OnibusData]{
     override def map(value: String): OnibusData = {
         
         val fieldsArray = value.substring(1,value.length-1).split(',')

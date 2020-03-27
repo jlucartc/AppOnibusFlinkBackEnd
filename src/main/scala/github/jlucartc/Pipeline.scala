@@ -3,10 +3,10 @@ package github.jlucartc
 import java.util.Properties
 import java.util.concurrent.TimeUnit
 
-import Functions.S2TMapFunction
+import Functions.{OnibusSaindoChegando, FormatarOnibusMapFunction}
 import KeySelectors.TupleKeySelector
 import Model.OnibusData
-import github.jlucartc.TimestampAssigners.PlacasPunctualTimestampAssigner
+import github.jlucartc.TimestampAssigners.OnibusPunctualTimestampAssigner
 import org.apache.flink.api.common.restartstrategy.RestartStrategies
 import org.apache.flink.api.common.serialization.SimpleStringSchema
 import org.apache.flink.core.fs.FileSystem
@@ -69,8 +69,8 @@ class Pipeline {
     var stream : DataStream[String] = env.addSource(new FlinkKafkaConsumer[String](onibusInputTopic,new SimpleStringSchema(),consumerprops)).uid("KafkaConsumerInput")
     
     var tupleStream : DataStream[OnibusData] = stream
-    .map(new S2TMapFunction()).uid("S2TMapFunction").name("S2TMapFunction")
-    .assignTimestampsAndWatermarks(new PlacasPunctualTimestampAssigner()).uid("PlacasPunctualTimestampAssigner")
+    .map(new FormatarOnibusMapFunction()).uid("S2TMapFunction").name("S2TMapFunction")
+    .assignTimestampsAndWatermarks(new OnibusPunctualTimestampAssigner()).uid("PlacasPunctualTimestampAssigner")
     
     var newTupleStream = tupleStream.keyBy(new TupleKeySelector()).process(new OnibusSaindoChegando(timeBetweenQueries)).uid("FollowDetectorProcessFunction").name("newTupleStream")
     

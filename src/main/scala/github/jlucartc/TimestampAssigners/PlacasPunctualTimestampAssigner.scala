@@ -1,43 +1,20 @@
 package github.jlucartc.TimestampAssigners
 
-import java.sql.Timestamp
-
-import github.jlucartc.Model.OnibusData
+import github.jlucartc.Model.PlacaData
 import org.apache.flink.streaming.api.functions.AssignerWithPunctuatedWatermarks
 import org.apache.flink.streaming.api.watermark.Watermark
 
-class PlacasPunctualTimestampAssigner extends AssignerWithPunctuatedWatermarks[OnibusData]{
+class PlacasPunctualTimestampAssigner extends AssignerWithPunctuatedWatermarks[PlacaData]{
     
-    var counter : Int = 0
-    var eventsUntilNextWatermark : Int = 0
-    var lastTimestamp : Long = _
+    override def checkAndGetNextWatermark(lastElement: PlacaData, extractedTimestamp: Long): Watermark = {
     
-    override def checkAndGetNextWatermark(lastElement: OnibusData, extractedTimestamp: Long): Watermark = {
-    
-        if(counter == eventsUntilNextWatermark){
-            
-            counter = 0
-            
-            var time = new Timestamp(lastTimestamp)
-            println("Watermark: ",time.toString)
-            new Watermark(lastTimestamp)
-            
-        }else{
-            
-            null
-        
-        }
+        new Watermark(extractedTimestamp)
     
     }
     
-    override def extractTimestamp(element: OnibusData, previousElementTimestamp: Long): Long = {
-    
-        
-        lastTimestamp = Math.max(lastTimestamp,element.timestamp)
-        
-        //counter = counter + 1
+    override def extractTimestamp(element: PlacaData, previousElementTimestamp: Long): Long = {
         
         element.timestamp
-    
+        
     }
 }
