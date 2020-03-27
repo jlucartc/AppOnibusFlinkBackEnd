@@ -56,8 +56,8 @@ class Pipeline {
     consumerprops.setProperty("bootstrap.servers",bootstrapServers)
     consumerprops.setProperty("zookeeper.connect",zookeeperConnect)
     consumerprops.setProperty("group.id",groupId)
-    //consumerprops.setProperty("auto.offset.reset",autoOffsetReset)
-    //consumerprops.setProperty("enable.auto.commit",enableAutoCommit)
+    consumerprops.setProperty("auto.offset.reset",autoOffsetReset)
+    consumerprops.setProperty("enable.auto.commit",enableAutoCommit)
 
     var producerprops : Properties = new Properties()
     producerprops.put("bootstrap.servers",bootstrapServers)
@@ -71,17 +71,15 @@ class Pipeline {
     var tupleStream : DataStream[OnibusData] = stream
     .map(new S2TMapFunction()).uid("S2TMapFunction").name("S2TMapFunction")
     .assignTimestampsAndWatermarks(new PlacasPunctualTimestampAssigner()).uid("PlacasPunctualTimestampAssigner")
-    .keyBy(new TupleKeySelector())
     
-    var newTupleStream = tupleStream.process(new OnibusSaindoChegando(timeBetweenQueries)).uid("FollowDetectorProcessFunction").name("newTupleStream")
+    var newTupleStream = tupleStream.keyBy(new TupleKeySelector()).process(new OnibusSaindoChegando(timeBetweenQueries)).uid("FollowDetectorProcessFunction").name("newTupleStream")
     
     val kafkaProducer = new FlinkKafkaProducer[String](bootstrapServers,onibusOutputTopic,new SimpleStringSchema())
     kafkaProducer.setWriteTimestampToKafka(true)
-    //newTupleStream.addSink(kafkaProducer)
     newTupleStream.addSink(kafkaProducer).name("KafkaProducer").uid("KafkaProducer")
     
     stream.writeAsText(outputFileURL1,FileSystem.WriteMode.OVERWRITE).name("StreamOutputFile").uid("StreamOutputFile")
-    tupleStream.writeAsText(outputFileURL2,FileSystem.WriteMode.OVERWRITE).name("TupleStreamOutputFile").uid("TupleStreamOutputFile")
+    newTupleStream.writeAsText(outputFileURL2,FileSystem.WriteMode.OVERWRITE).name("TupleStreamOutputFile").uid("TupleStreamOutputFile")
     
     println("Pipeline begin...")
     
