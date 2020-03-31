@@ -14,6 +14,8 @@ class PlacasEventProducer(modo: Boolean, quantidadeEventos : Int) extends Thread
     
     override def run = {
     
+        Thread.sleep(10000)
+        
         val placasBootstrapServers = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_BOOTSTRAP_SERVERS") match { case Some(res) => { res } case None => { "" } }
         val placasZookeeperConnect = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ZOOKEEPER_CONNECT") match { case Some(res) => { res } case None => { "" } }
         val placasAcks = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_PLACASEVENTPRODUCER_ACKS") match { case Some(res) => { res } case None => { "" } }

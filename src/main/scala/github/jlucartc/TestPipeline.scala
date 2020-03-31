@@ -80,7 +80,7 @@ class TestPipeline {
     
     val placasEventoPerseguicaoIntervaloSegundos = 300
     val placasAlertaPerseguicaoIntervaloSegundos = 1500
-    val placasQuantidadeMinimaPontos = 1
+    val placasQuantidadeMinimaPontos = 3
     
     val placasProducerKeySerializer = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_PLACAS_KAFKA_PRODUCER_KEY_SERIALIZER") match { case Some(res) => {res} case None => { "" } }
     val placasProducerValueSerializer = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_PLACAS_KAFKA_PRODUCER_VALUE_SERIALIZER") match { case Some(res) => {res} case None => { "" } }

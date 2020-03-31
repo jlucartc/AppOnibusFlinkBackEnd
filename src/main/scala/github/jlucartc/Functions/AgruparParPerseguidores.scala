@@ -17,21 +17,21 @@ class AgruparParPerseguidores(intervaloSegundos : Long, qPontos : Int) extends K
             
         }
         
-        val q = mapaAlertas.get(value.perseguido+"."+value.perseguidor)
+        val q = mapaAlertas.get(ctx.getCurrentKey)
         
         if(q == null){
     
-            mapaAlertas.put(value.perseguido+"."+value.perseguidor,(value,1))
+            mapaAlertas.put(ctx.getCurrentKey,(value,1))
             
         }else{
     
-            if(value.timestamp - q._1.timestamp > intervaloSegundos*1000 ){
-                mapaAlertas.put(value.perseguido+"."+value.perseguidor,(value,1))
+            if((value.timestamp - q._1.timestamp ) > intervaloSegundos*1000 ){
+                mapaAlertas.put(ctx.getCurrentKey,(value,1))
             }else{
         
-                mapaAlertas.put(value.perseguido+"."+value.perseguidor,(value,mapaAlertas.get(value.perseguido+"."+value.perseguidor)._2+1))
+                mapaAlertas.put(ctx.getCurrentKey,(mapaAlertas.get(ctx.getCurrentKey)._1,mapaAlertas.get(ctx.getCurrentKey)._2+1))
         
-                if(mapaAlertas.get(value.perseguido+"."+value.perseguidor)._2 > qPontos){
+                if(mapaAlertas.get(ctx.getCurrentKey)._2 >= qPontos){
             
                     out.collect(AlertaPerseguicao(value.perseguido,value.perseguidor,value.timestamp).toString)
             

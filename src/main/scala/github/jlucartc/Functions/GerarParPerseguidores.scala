@@ -32,17 +32,21 @@ class GerarParPerseguidores(intervaloSegundos: Int) extends KeyedProcessFunction
             
         })
         
-        if( length > 0){
+        if( length > 0 ){
 
             val novaLista = new util.ArrayList[PlacaData]()
             
-            lista.forEach( item => {
+            lista.forEach( (item) => {
                 
-                if((value.timestamp - item.timestamp ) <= intervaloSegundos*1000 ){
+                if((value.timestamp - item.timestamp ) <= intervaloSegundos*1000){
                     
                     novaLista.add(item)
                     
-                    out.collect(ParPerseguicao(item.placa,value.placa,value.timestamp))
+                    if(value.placa != item.placa) {
+    
+                        out.collect(ParPerseguicao(item.placa, value.placa, value.timestamp))
+                    
+                    }
                     
                 }
                 
