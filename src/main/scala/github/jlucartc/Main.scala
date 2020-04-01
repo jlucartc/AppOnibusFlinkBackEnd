@@ -11,7 +11,8 @@ object Main {
         //val pipeline = new Pipeline()
         
         val CONTINUO = false
-        val placasEventProducer = new PlacasEventProducer(!CONTINUO,20)
+        val placasEventProducer = new PlacasEventProducer(!CONTINUO,2
+        0)
     
         placasEventProducer.start()
         
