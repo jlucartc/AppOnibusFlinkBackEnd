@@ -17,12 +17,16 @@ import org.apache.flink.streaming.connectors.kafka.{FlinkKafkaConsumer, FlinkKaf
 
 class TestPipeline {
     
-    // Pipeline configuration variables
+    
+    // Variaveis de configuração da Pipeline
     
     val pipelineParallelism = 1
     val pipelineCheckPointingTimeInterval = 10
     val pipelineRestartAttempts = 1
     val pipelineTimeBeforeRetry = 10000
+    
+    
+    // Setando configuraões da Pipeline
     
     val env = StreamExecutionEnvironment.getExecutionEnvironment
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
@@ -30,12 +34,14 @@ class TestPipeline {
     env.enableCheckpointing(pipelineCheckPointingTimeInterval)
     env.setRestartStrategy(RestartStrategies.fixedDelayRestart(pipelineRestartAttempts,org.apache.flink.api.common.time.Time.of(pipelineTimeBeforeRetry,TimeUnit.MILLISECONDS)))
     
-    // Adresses of Kafka and Zookeeper services
+    
+    // Variáveis de configuração de Sinks, Sources e Operadores
     
     val bootstrapServers = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_BOOTSTRAP_SERVERS") match { case Some(res) => {res} case None => { "" } }
     val zookeeperConnect = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ZOOKEEPER_CONNECT") match { case Some(res) => {res} case None => { "" } }
     
-    // Onibus
+    
+    // Variáveis de configuração do evento 'Onibus'
     
     val onibusTimeBetweenQueries = 100
     
@@ -49,6 +55,9 @@ class TestPipeline {
     val onibusConsumerAutoOffsetReset = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ONIBUS_KAFKA_CONSUMER_AUTO_OFFSET_RESET")  match { case Some(res) => {res} case None => { "" } }
     val onibusConsumerEnableAutoCommit = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ONIBUS_KAFKA_CONSUMER_ENABLE_AUTO_COMMIT")  match { case Some(res) => {res} case None => { "" } }
     val onibusConsumerTopic = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ONIBUS_KAFKA_CONSUMER_TOPIC") match { case Some(res) => {res} case None => { "" } }
+    
+    
+    // Criando Properties de Sinks e Sources do evento 'Onibus'
     
     var onibusConsumerProps : Properties = new Properties()
     onibusConsumerProps.setProperty("bootstrap.servers",bootstrapServers)
@@ -64,19 +73,41 @@ class TestPipeline {
     onibusProducerProps.put("acks",onibusProducerAcks)
     onibusProducerProps.put("transaction.timeout.ms",onibusProducerTransactionTimeout)
     
-    var onibusRawStream : DataStream[String] = env.addSource(new FlinkKafkaConsumer[String](onibusConsumerTopic,new SimpleStringSchema(),onibusConsumerProps)).uid("OnibusKafkaConsumerInput")
+    
+    // Criando e adicionando Source do evento 'Onibus'
+    
+    var onibusRawStream : DataStream[String] = env
+    .addSource(new FlinkKafkaConsumer[String](onibusConsumerTopic,new SimpleStringSchema(),onibusConsumerProps))
+    .uid("OnibusKafkaConsumerInput")
+    
+    
+    // Criando DataStream do evento 'Onibus' e adicionando operadores
     
     var onibusFormattedStream : DataStream[OnibusData] = onibusRawStream
-    .map(new FormatarOnibusMapFunction()).uid("FormatarOnibusMapFunction").name("FormatarOnibusMapFunction")
-    .assignTimestampsAndWatermarks(new OnibusPunctualTimestampAssigner()).uid("OnibusPunctualTimestampAssigner")
+    .map(new FormatarOnibusMapFunction())
+    .uid("FormatarOnibusMapFunction")
+    .name("FormatarOnibusMapFunction")
+    .assignTimestampsAndWatermarks(new OnibusPunctualTimestampAssigner())
+    .uid("OnibusPunctualTimestampAssigner")
     
-    var onibusAlertStream = onibusFormattedStream.keyBy(new TupleKeySelector()).process(new OnibusSaindoChegando(onibusTimeBetweenQueries)).uid("FollowDetectorProcessFunction").name("FollowDetectorProcessFunction")
+    var onibusAlertStream = onibusFormattedStream
+    .keyBy(new TupleKeySelector())
+    .process(new OnibusSaindoChegando(onibusTimeBetweenQueries))
+    .uid("FollowDetectorProcessFunction").name("FollowDetectorProcessFunction")
+    
+    
+    // Criando e adicionando Sink do evento 'Onibus'
     
     val onibuskafkaProducer = new FlinkKafkaProducer[String](bootstrapServers,onibusProducerTopic,new SimpleStringSchema())
-    onibuskafkaProducer.setWriteTimestampToKafka(true)
-    onibusAlertStream.addSink(onibuskafkaProducer).name("OnibusKafkaProducer").uid("OnibusKafkaProducer")
     
-    // Placas
+    onibuskafkaProducer.setWriteTimestampToKafka(true)
+    
+    onibusAlertStream
+    .addSink(onibuskafkaProducer)
+    .name("OnibusKafkaProducer")
+    .uid("OnibusKafkaProducer")
+    
+    // Variáveis de configuração do evento 'Placas'
     
     val placasEventoPerseguicaoIntervaloSegundos = 300
     val placasAlertaPerseguicaoIntervaloSegundos = 1500
@@ -93,6 +124,9 @@ class TestPipeline {
     val placasConsumerEnableAutoCommit = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_PLACAS_KAFKA_CONSUMER_ENABLE_AUTO_COMMIT")  match { case Some(res) => {res} case None => { "" } }
     val placasConsumerTopic = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_PLACAS_KAFKA_CONSUMER_TOPIC") match { case Some(res) => {res} case None => { "" } }
     
+    
+    // Criando Properties de Sinks e Sources do evento 'Placas'
+    
     var placasConsumerProps : Properties = new Properties()
     placasConsumerProps.setProperty("bootstrap.servers",bootstrapServers)
     placasConsumerProps.setProperty("zookeeper.connect",zookeeperConnect)
@@ -107,22 +141,45 @@ class TestPipeline {
     placasProducerProps.put("acks",placasProducerAcks)
     placasProducerProps.put("transaction.timeout.ms",placasProducerTransactionTimeout)
     
-    var placasRawStream : DataStream[String] = env.addSource(new FlinkKafkaConsumer[String](placasConsumerTopic,new SimpleStringSchema(),placasConsumerProps)).uid("PlacasKafkaConsumerInput")
+    
+    // Criando e adicionando Source do evento 'Placas'
+    
+    var placasRawStream : DataStream[String] = env
+    .addSource(new FlinkKafkaConsumer[String](placasConsumerTopic,new SimpleStringSchema(),placasConsumerProps))
+    .uid("PlacasKafkaConsumerInput")
+    
+    
+    // Criando DataStream do evento 'Placas' e adicionando operadores
     
     var placasFormattedStream : DataStream[PlacaData] = placasRawStream
-    .map(new FormatarPlacasMapFunction()).uid("FormatarPlacasMapFunction").name("FormatarPlacasMapFunction")
-    .assignTimestampsAndWatermarks(new PlacasPunctualTimestampAssigner()).uid("PlacasPunctualTimestampAssigner")
+    .map(new FormatarPlacasMapFunction())
+    .uid("FormatarPlacasMapFunction")
+    .name("FormatarPlacasMapFunction")
+    .assignTimestampsAndWatermarks(new PlacasPunctualTimestampAssigner())
+    .uid("PlacasPunctualTimestampAssigner")
     
-    var placasParPerseguicaoStream : DataStream[ParPerseguicao]= placasFormattedStream.keyBy(new PlacasKeyByPontoID())
+    var placasParPerseguicaoStream : DataStream[ParPerseguicao]= placasFormattedStream
+    .keyBy(new PlacasKeyByPontoID())
     .process(new GerarParPerseguidores(placasEventoPerseguicaoIntervaloSegundos))
     
-    var placasAlertStream = placasParPerseguicaoStream.keyBy(new ParPersegucaoKeyByPlacas()).process(new AgruparParPerseguidores(placasAlertaPerseguicaoIntervaloSegundos,placasQuantidadeMinimaPontos))
+    var placasAlertStream = placasParPerseguicaoStream
+    .keyBy(new ParPersegucaoKeyByPlacas())
+    .process(new AgruparParPerseguidores(placasAlertaPerseguicaoIntervaloSegundos,placasQuantidadeMinimaPontos))
+    
+    
+    // Criando e adicionando Sink do evento 'Placas'
     
     val placasKafkaProducer = new FlinkKafkaProducer[String](bootstrapServers,placasProducerTopic,new SimpleStringSchema())
-    placasKafkaProducer.setWriteTimestampToKafka(true)
-    placasAlertStream.addSink(placasKafkaProducer).name("PlacasKafkaProducer").uid("PlacasKafkaProducer")
+   
+    placasKafkaProducer
+    .setWriteTimestampToKafka(true)
     
-    // Temperatura
+    placasAlertStream
+    .addSink(placasKafkaProducer)
+    .name("PlacasKafkaProducer")
+    .uid("PlacasKafkaProducer")
+    
+    // Variáveis de configuração do evento Temperatura
     
     val temperaturaProducerKeySerializer = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_TEMPERATURA_KAFKA_PRODUCER_KEY_SERIALIZER") match { case Some(res) => {res} case None => { "" } }
     val temperaturaProducerValueSerializer = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_TEMPERATURA_KAFKA_PRODUCER_VALUE_SERIALIZER") match { case Some(res) => {res} case None => { "" } }
@@ -149,7 +206,9 @@ class TestPipeline {
     temperaturaProducerProps.put("acks",temperaturaProducerAcks)
     temperaturaProducerProps.put("transaction.timeout.ms",temperaturaProducerTransactionTimeout)
     
-    var temperaturaRawStream : DataStream[String] = env.addSource(new FlinkKafkaConsumer[String](temperaturaConsumerTopic,new SimpleStringSchema(),temperaturaConsumerProps)).uid("KafkaConsumerInput")
+    var temperaturaRawStream : DataStream[String] = env
+    .addSource(new FlinkKafkaConsumer[String](temperaturaConsumerTopic,new SimpleStringSchema(),temperaturaConsumerProps))
+    .uid("KafkaConsumerInput")
 
     /*var temperaturaFormattedStream : DataStream[OnibusData] = temperaturaRawStream
     .map(new S2TMapFunction()).uid("S2TMapFunction").name("S2TMapFunction")

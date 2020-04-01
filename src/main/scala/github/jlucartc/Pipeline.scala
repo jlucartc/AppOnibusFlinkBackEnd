@@ -19,16 +19,20 @@ import org.apache.flink.streaming.connectors.kafka.{FlinkKafkaConsumer, FlinkKaf
 class Pipeline {
     
     println("Pipeline setup...")
-
-    val timeLimitSeconds = 120
-    val seconds = 421
+    
+    
+    // Variáveis de configuração da Pipeline
+    
     val parallelism = 1
     val checkPointingTimeInterval = 10
     val restartAttempts = 1
     val timeBeforeRetry = 10000
     
-    val bootstrapServers = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ONIBUS_BOOTSTRAP_SERVERS") match { case Some(res) => {res} case None => { "" } }
-    val zookeeperConnect = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ONIBUS_ZOOKEEPER_CONNECT") match { case Some(res) => {res} case None => { "" } }
+    
+    // Variáveis de configuração de Sinks, Sources e Operadores
+    
+    val bootstrapServers = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_BOOTSTRAP_SERVERS") match { case Some(res) => {res} case None => { "" } }
+    val zookeeperConnect = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ZOOKEEPER_CONNECT") match { case Some(res) => {res} case None => { "" } }
     val groupId = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ONIBUS_KAFKA_CONSUMER_GROUP_ID")  match { case Some(res) => {res} case None => { "" } }
     
     val keySerializer = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ONIBUS_KAFKA_PRODUCER_KEY_SERIALIZER") match { case Some(res) => {res} case None => { "" } }
@@ -44,13 +48,19 @@ class Pipeline {
     val inputFileURL1 = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ONIBUS_CONFIG_INPUTFILEURL1") match { case Some(res) => {res} case None => { "" } }
     val outputFileURL1 = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ONIBUS_CONFIG_OUTPUTFILEURL1") match { case Some(res) => {res} case None => { "" } }
     val outputFileURL2 = sys.env.get("GITHUB_JLUCARTC_APPONIBUSFLINKBACKEND_FLINKJOB_ONIBUS_CONFIG_OUTPUTFILEURL2") match { case Some(res) => {res} case None => { "" } }
+    
     val timeBetweenQueries = 1
     
+    
+    // Configurando pipeline
     val env = StreamExecutionEnvironment.getExecutionEnvironment
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
     env.setParallelism(parallelism)
     env.enableCheckpointing(checkPointingTimeInterval)
     env.setRestartStrategy(RestartStrategies.fixedDelayRestart(restartAttempts,org.apache.flink.api.common.time.Time.of(timeBeforeRetry,TimeUnit.MILLISECONDS)))
+    
+    
+    // Criando propriedades de configuração de Sinks e Sources
     
     var consumerprops : Properties = new Properties()
     consumerprops.setProperty("bootstrap.servers",bootstrapServers)
@@ -66,13 +76,22 @@ class Pipeline {
     producerprops.put("acks",acks)
     producerprops.put("transaction.timeout.ms",transactionTimeout)
     
+    
+    // Criando e adicionando Source
+    
     var stream : DataStream[String] = env.addSource(new FlinkKafkaConsumer[String](onibusInputTopic,new SimpleStringSchema(),consumerprops)).uid("KafkaConsumerInput")
+    
+    
+    // Criando DataStream e adicionando operadores
     
     var tupleStream : DataStream[OnibusData] = stream
     .map(new FormatarOnibusMapFunction()).uid("S2TMapFunction").name("S2TMapFunction")
     .assignTimestampsAndWatermarks(new OnibusPunctualTimestampAssigner()).uid("PlacasPunctualTimestampAssigner")
     
     var newTupleStream = tupleStream.keyBy(new TupleKeySelector()).process(new OnibusSaindoChegando(timeBetweenQueries)).uid("FollowDetectorProcessFunction").name("newTupleStream")
+    
+    
+    // Criando e adicionando Sink
     
     val kafkaProducer = new FlinkKafkaProducer[String](bootstrapServers,onibusOutputTopic,new SimpleStringSchema())
     kafkaProducer.setWriteTimestampToKafka(true)
@@ -82,6 +101,9 @@ class Pipeline {
     newTupleStream.writeAsText(outputFileURL2,FileSystem.WriteMode.OVERWRITE).name("TupleStreamOutputFile").uid("TupleStreamOutputFile")
     
     println("Pipeline begin...")
+    
+    
+    // Iniciando execução da Pipeline
     
     env.execute("OnibusPipeline")
     
