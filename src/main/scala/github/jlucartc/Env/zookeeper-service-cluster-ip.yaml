@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: zookeeper-service-cluster-ip
+spec:
+  type: ClusterIP
+  selector:
+    app: zookeeper-pod
+  ports:
+  - name: default
+    port: 2181

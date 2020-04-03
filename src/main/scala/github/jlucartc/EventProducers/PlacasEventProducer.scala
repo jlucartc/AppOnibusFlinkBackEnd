@@ -55,8 +55,6 @@ class PlacasEventProducer(modo: Boolean, quantidadeEventos : Int) extends Thread
     }
     
     def gerarEventos(quantidade: Int, segundosEntreTimestamps : Int, props : Properties): Unit = {
-    
-        val placa = UUID.randomUUID().toString.substring(0,7)
         
         val step = segundosEntreTimestamps*1000
         
@@ -85,8 +83,6 @@ class PlacasEventProducer(modo: Boolean, quantidadeEventos : Int) extends Thread
     }
     
     def gerarEventosContinuo(intervaloEntreMensagensMilisegundos : Long, segundosEntreTimestamps: Int, props : Properties) = {
-    
-        val placa = UUID.randomUUID().toString.substring(0,7)
     
         val step = segundosEntreTimestamps*1000
     
@@ -120,7 +116,15 @@ class PlacasEventProducer(modo: Boolean, quantidadeEventos : Int) extends Thread
         
         for( i <- 0 to quantidade-1){
             
-            listaPlacas.add(UUID.randomUUID().toString.substring(0,7))
+            var placa = UUID.randomUUID().toString.substring(0,7)
+            
+            while(listaPlacas.indexOf(placa) >= 0){
+    
+                placa = UUID.randomUUID().toString.substring(0,7)
+                
+            }
+            
+            listaPlacas.add(placa)
             
         }
         
