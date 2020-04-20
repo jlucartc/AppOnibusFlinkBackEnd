@@ -1,6 +1,6 @@
 package github.jlucartc
 
-import github.jlucartc.EventProducers.PlacasEventProducer
+import github.jlucartc.EventProducers.{PlacasEventProducer, TemperaturaEventProducer}
 
 object Main {
 
@@ -11,11 +11,13 @@ object Main {
         //val pipeline = new Pipeline()
         
         val CONTINUO = false
-        val placasEventProducer = new PlacasEventProducer(!CONTINUO,20)
+        //val placasEventProducer = new PlacasEventProducer(!CONTINUO,20)
+        val temperaturaEventProducer = new TemperaturaEventProducer(-30,60,20,30,!CONTINUO)
     
-        placasEventProducer.start()
-        
-        val testPipeline = new TestPipeline()
+        temperaturaEventProducer.start()
+        //placasEventProducer.start()
+    
+        //val testPipeline = new TestPipeline()
 
     }
 

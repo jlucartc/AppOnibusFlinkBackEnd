@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zookeeper-deploy
+  labels:
+    app: zookeeper-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zookeeper-pod
+  template:
+    metadata:
+      labels:
+        app: zookeeper-pod
+    spec:
+      containers:
+      - name: zookeeper-pod
+        image: wurstmeister/zookeeper
+        ports:
+          - containerPort: 2181
+

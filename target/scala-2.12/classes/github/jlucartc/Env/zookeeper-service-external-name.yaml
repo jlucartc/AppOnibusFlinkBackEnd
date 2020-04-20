@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: zookeeper-service-external-name
+spec:
+  type: ExternalName
+  externalName: zookeeper.service
+  selector:
+    app: zookeeper-pod
+  ports:
+  - name: default
+    port: 2181
